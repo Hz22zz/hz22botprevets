@@ -1,0 +1,15 @@
+let handler = async (m, { conn }) => {
+    conn.sendButtonImg(m.chat, global.API('alphabot', '/cecan/rose', {}, 'apikey'), 'Nih', wm, 'NEXT', '.rose', m)
+}
+
+/*let fetch = require('node-fetch')
+let handler = async (m, { conn }) => {
+    let url = global.API('alphabot', '/cecan/rose', {}, 'APIKEY')
+    await conn.sendButtonImg(m.chat, url, '*ROSE*', wm, 'NEXT', '.rose',m, 0, { thumbnail: await (await fetch(url)).buffer() })
+}*/
+handler.help = ['rose']
+handler.tags = ['internet']
+handler.command = /^(rose)$/i
+handler.limit = false
+
+module.exports = handler
